@@ -19,7 +19,7 @@ $(font): $(objs)
 dist: all
 	mkdir $(font)
 	cp $(objs) $(docs) $(font)
-	zip -9 $(font).zip $(font)
+	zip -9r $(font).zip $(font)
 
 readme-rus: $(rusdocs)
 
