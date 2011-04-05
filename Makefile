@@ -24,18 +24,18 @@ dist: all
 readme-rus: $(rusdocs)
 
 README.ru.cp1251: README.ru.utf8
-	iconv --from-code=utf8 --to-code=cp1251 --output=$@ $<
+	iconv -f utf-8 -t cp1251 $< > $@
 README.ru.iso8859-5: README.ru.utf8
-	iconv --from-code=utf8 --to-code=iso8859-5 --output=$@ $<
+	iconv -f utf-8 -t iso8859-5 $< > $@
 README.ru.koi8: README.ru.utf8
-	iconv --from-code=utf8 --to-code=koi8-r --output=$@ $<
+	iconv -f utf-8 -t koi8-r $< > $@
 
 readme-jpn: $(jpndocs)
 
 README.ja.sjis: README.ja.utf8
-	iconv --from-code=utf8 --to-code=sjis --output=$@ $<
+	iconv -f utf-8 -t sjis $< > $@
 README.ja.euc: README.ja.utf8
-	iconv --from-code=utf8 --to-code=euc-jp --output=$@ $<
+	iconv -f utf-8 -t euc-jp $< > $@
 
 .PHONY: clean
 clean:
