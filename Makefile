@@ -39,4 +39,4 @@ README.ja.euc: README.ja.utf8
 
 .PHONY: clean
 clean:
-	rm -rf $(objs) $(font) $(font).zip $(rusdocs) $(jpndocs)
+	-rm -rf $(objs) $(font) $(font).zip $(rusdocs) $(jpndocs)
